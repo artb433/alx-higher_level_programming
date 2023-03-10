@@ -1,1 +1,1 @@
-This is the readme
+This directory contain my first ALX project on python
