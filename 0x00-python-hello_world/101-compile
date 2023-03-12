@@ -1,2 +1,2 @@
 #!/bin/bash
-python -m compileall $PYFILE
+python3 -B -m compileall $PYFILE -b -x "__pycache__"
