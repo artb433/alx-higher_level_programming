@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-
-for i in range(0, 10):
-    for j in range(0, 10):
-        if j > i:  # check if j is greater than i before printing
-            if i == 8 and j == 9:
-                print("{}{}".format(i, j))
-                break
-
-            print("{}{}".format(i, j), end=", ")
+for x in range(0, 10):
+    for y in range(x + 1, 10):
+        if x == 8 and y == 9:
+            print('89')
+        else:
+            print('{}{}, '.format(x, y), end='')

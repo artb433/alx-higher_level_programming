@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 
 def no_c(my_string):
-
-    new_string = ""
-
+    updated_str = ''
     for i in my_string:
-        if i != chr(99) and i != chr(67):
-            new_string = new_string + i
-
-    return new_string
+        if i != 'c' and i != 'C':
+            updated_str += i
+    return (updated_str)

@@ -1,1 +1,3 @@
-This directory holds the solutions to the tasks of the third python project
+# Solutions to tasks on modules
+___
+Python - import & modules
