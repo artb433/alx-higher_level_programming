@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 
 def multiple_returns(sentence):
-    if sentence != '':
-        first_char = sentence[0]
+
+    str_len = len(sentence)
+
+    if str_len == 0:
+        str_char = None
     else:
-        first_char = None
-    return (len(sentence), first_char)
+        str_char = sentence[0]
+
+    return (str_len, str_char)
