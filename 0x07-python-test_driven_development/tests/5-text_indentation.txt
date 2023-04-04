@@ -1,0 +1,41 @@
+>>> import sys
+>>> sys.path.append("..")
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Here is .  My good:   Text.")
+Here is .
+<BLANKLINE>
+My good:
+<BLANKLINE>
+Text.
+<BLANKLINE>
+
+>>> text_indentation(15)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation("15?")
+15?
+<BLANKLINE>
+
+>>> text_indentation("             news?   Nah, none.")
+             news?
+<BLANKLINE>
+Nah, none.
+<BLANKLINE>
+
+>>> text_indentation("Hitotsu.               Futatsu?                  Mitsu :")
+Hitotsu.
+<BLANKLINE>
+Futatsu?
+<BLANKLINE>
+Mitsu :
+<BLANKLINE>
+
+>>> text_indentation("Ichi. Ni. San   ")
+Ichi.
+<BLANKLINE>
+Ni.
+<BLANKLINE>
+San   

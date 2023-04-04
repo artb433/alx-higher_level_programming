@@ -1,0 +1,22 @@
+>>> import sys
+>>> sys.path.append("..")
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("Szayel", "Aporro")
+My name is Szayel Aporro
+
+>>> say_my_name("Szayel", 100)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name(1000, "Orion")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name("     Szayel     ", "Aporro     ")
+My name is Szayel Aporro
+
+>>> say_my_name("Here is my", "  name  ")
+My name is Here is my name
