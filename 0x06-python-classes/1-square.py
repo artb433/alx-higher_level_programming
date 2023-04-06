@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-
-"""This module contains a class that instantiates a private size fiels """
+"""Define a class Square."""
 
 
 class Square:
-    """Create a Square class and instantiate a private size field"""
+    """Represent a square."""
 
     def __init__(self, size):
+        """Initialize a new Square.
+
+        Args:
+            size (int): The size of the new square.
+        """
         self.__size = size

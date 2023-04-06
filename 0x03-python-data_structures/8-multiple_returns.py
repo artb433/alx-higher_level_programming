@@ -1,12 +1,18 @@
 #!/usr/bin/python3
 
 def multiple_returns(sentence):
+    """
+    find the length and first character of a str
+    Args:
+        sentence - a string
+    Return:
+        (length, first_char)
+    """
+    if not sentence:
+        return 0, None
+    return len(sentence), sentence[0]
 
-    str_len = len(sentence)
 
-    if str_len == 0:
-        str_char = None
-    else:
-        str_char = sentence[0]
-
-    return (str_len, str_char)
+if __name__ == '__main__':
+    l, f = multiple_returns("At school, i learnt C!")
+    print("Length: {:d} - First character: {}".format(l, f))

@@ -1,41 +1,30 @@
 #!/usr/bin/python3
-
-"""
-   module for indenting text passed in as parameter to function: \
-   text_indentation(text)
-"""
+# 5-text_indentation.py
+"""Defines a text-indentation function."""
 
 
 def text_indentation(text):
+    """Print text with two new lines after each '.', '?', and ':'.
+
+    Args:
+        text (string): The text to print.
+    Raises:
+        TypeError: If text is not a string.
     """
-       print a newline after the occurence of delimeter in text
-       delimeters: [".", "?", ":"]
-
-       text must be a string; otherwise raise TypeError
-       Ignore all whitespace after delimeter and print the next character
-    """
-
-    check_w_space = 0
-    delim_list = [".", "?", ":"]
-
-    if not (isinstance(text, str)):
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    for i in range(len(text)):
-        for j in delim_list:
-            if text[i] == j:
-                print("{}\n".format(text[i]))
+    c = 0
+    while c < len(text) and text[c] == ' ':
+        c += 1
 
-                i += 1
-                check_w_space = 1
-                break
-
-        try:
-            if check_w_space == 1 and text[i] == " ":
-                continue
-            else:
-                check_w_space = 0
-
-            print("{}".format(text[i]), end="")
-        except IndexError:
-            pass
+    while c < len(text):
+        print(text[c], end="")
+        if text[c] == "\n" or text[c] in ".?:":
+            if text[c] in ".?:":
+                print("\n")
+            c += 1
+            while c < len(text) and text[c] == ' ':
+                c += 1
+            continue
+        c += 1

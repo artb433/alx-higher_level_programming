@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 
-def no_c(my_string):
-
-    new_string = ""
-
-    for i in my_string:
-        if i != chr(99) and i != chr(67):
-            new_string = new_string + i
-
-    return new_string
+def no_c(my_str):
+    """
+    Returns a copy of my_str without c or C
+    Args:
+        my_str - the string to filter
+    """
+    return "".join(filter(lambda x: x not in 'cC', my_str))
