@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-# 4-rectangle.py
-"""Defines a Rectangle class."""
+"""Structure of a Rectangle class."""
 
 
 class Rectangle:
@@ -17,7 +16,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """Get/set the width of the Rectangle."""
+        """set the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -30,7 +29,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get/set the height of the Rectangle."""
+        """set the height of the Rectangle."""
         return self.__height
 
     @height.setter

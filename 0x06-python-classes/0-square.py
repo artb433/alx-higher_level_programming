@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""Define a class Square."""
+# 0-square.py by UDO INNOCENT
+"""Defines a square """
+
 
 class Square:
-    """Represent a square."""
+    """Does nothing"""
     pass
