@@ -1,35 +1,31 @@
-# Python - Network #1
+# Welcome to ALX Higher Level Programming Repository
 
-![](https://sf.ezoiccdn.com/ezoimgfmt/networkencyclopedia.com/wp-content/uploads/2019/08/computer-networking-1.jpg?ezimgfmt=ng%3Awebp%2Fngcb2%2Frs%3Adevice%2Frscb2-1)
+![alx](https://user-images.githubusercontent.com/110563322/185378867-15f6a19c-a417-4012-9a69-ad8dc252d295.jpeg)
 
-## Learning Objectives
+# This is my Python Network 1 Repo @ ALX academy
 
-- How to fetch internet resources with the __Python package `urllib`__
-- How to decode urllib body response
-- How to use the Python package requests #requestsiswaysimplerthanurllib
-- How to make __HTTP GET request__
-- How to make __HTTP POST/PUT/etc. request__
-- How to fetch __JSON__ resources
-- How to manipulate data from an external service
+![alxx](https://user-images.githubusercontent.com/110563322/185378889-8d6595c4-b441-4a6d-8700-4c0043886cdf.jpg)
 
-## Needed Knowledge
+---
 
-- HOWTO Fetch Internet Resources Using urllib Package
-- Quickstart with Requests package
-- Requests package
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://twitter.com/mpfanawagacha" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Manuel Dinis Júnior" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/manuel-dinis-junior" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="agboola-olawale-damilola-7b2132246" height="30" width="40" /></a>
+<a href="https://stackoverflow.com/users/21437069" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="19747131" height="30" width="40" /></a>
+<a href="https://instagram.com/manueldinisjunior" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="Manuel Dinis Júnior" height="30" width="40" /></a>
 
-## Requirements
 
-- Allowed editors: `vi`, `vim`, `emacs`
-- All your files will be interpreted/compiled on `Ubuntu 20.04 LTS` using `python3 (version 3.8.5)`
-- All your files should __end with a new line__
-- The first line of all your files should be exactly `#!/usr/bin/python3`
-- A README.md file at the root of the repo, containing a description of the repository
-- A README.md file, at the root of the folder of this project, is mandatory
-Your code should use the pycodestyle (version 2.8.*)
-- All your files must be executable
-- The length of your files will be tested using wc
-- All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
-- You must use get to access to dictionary value by key (__it won’t throw an exception if the key doesn’t exist in the dictionary__)
-- A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (__the length of it will be verified__)
-- Your code should not be executed when imported ``(by using if __name__ == "__main__":)``
+## Author:
+* **Manuel Dinis Júnior** <[Manuel Dinis Júnior](https://github.com/manueldinisjunior)>
+
+## Acknowledgements :pray:
+
+All work contained in this project was completed as part of the curriculum for ALX Africa SE. ALX Africa is an online full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information, visit [ALX AFRICA](https://www.alxafrica.com//).
+
+
+<p align="center">
+  <img src="http://www.alxafrica.com/wp-content/uploads/2022/01/header-logo.png"
+    alt="ALX Africa Logo"
+  >
+  </p>

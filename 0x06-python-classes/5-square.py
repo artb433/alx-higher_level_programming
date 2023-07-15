@@ -1,54 +1,39 @@
 #!/usr/bin/python3
-# 0-square.py by UDO INNOCENT
-"""A module that defines a square """
+"""Define a class Square."""
 
 
 class Square:
-    """A class that represents a square"""
+    """Represent a square."""
 
-    def __init__(self, size=0):
-        """Initializing this square class
+    def __init__(self, size):
+        """Initialize a new square.
+
         Args:
-            size: represnets the size of the square defined
-        Raises:
-            TypeError: if size is not integer
-            ValueError: if size is less than zero
+            size (int): The size of the new square.
         """
-
-        if not isinstance(size, int):
-            raise TypeError('size must be an integer')
-        if size < 0:
-            raise ValueError('size must be >= 0')
-
-        self.__size = size
+        self.size = size
 
     @property
     def size(self):
-        """Retrieves size of square"""
-
-        return self.__size
+        """Get/set the current size of the square."""
+        return (self.__size)
 
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
-            raise TypeError('size must be an integer')
-        if value < 0:
-            raise ValueError('size must be >= 0')
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
         self.__size = value
 
     def area(self):
-        """
-        Calculate area of the square
-        Returns: The square of the size
-        """
-
-        return (self.__size ** 2)
+        """Return the current area of the square."""
+        return (self.__size * self.__size)
 
     def my_print(self):
-        """print the square in # """
-
+        """Print the square with the # character."""
+        for i in range(0, self.__size):
+            [print("#", end="") for j in range(self.__size)]
+            print("")
         if self.__size == 0:
-            print()
-
-        for i in range(self.__size):
-            print("#" * self.__size)
+            print("")

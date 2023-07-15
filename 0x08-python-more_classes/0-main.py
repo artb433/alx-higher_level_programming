@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 Rectangle = __import__('0-rectangle').Rectangle
 
-rect = Rectangle()
-print(type(rect))
-print(rect.__dict__)
+my_rectangle = Rectangle()
+print(type(my_rectangle))
+print(my_rectangle.__dict__)

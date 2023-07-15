@@ -16,7 +16,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """set the width of the Rectangle."""
+        """Get/set the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -29,7 +29,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """set the height of the Rectangle."""
+        """Get/set the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -71,5 +71,5 @@ class Rectangle:
         return (rect)
 
     def __del__(self):
-        """Display a message for every deletion of a Rectangle."""
+        """Print a message for every deletion of a Rectangle."""
         print("Bye rectangle...")
