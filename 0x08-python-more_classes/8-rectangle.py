@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+# 8-rectangle.py
 """Defines a Rectangle class."""
 
 
 class Rectangle:
-    """Display a rectangle.
+    """Represent a rectangle.
     Attributes:
         number_of_instances (int): The number of Rectangle instances.
         print_symbol (any): The symbol used for string representation.
@@ -13,7 +14,7 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """Display a new Rectangle.
+        """Initialize a new Rectangle.
         Args:
             width (int): The width of the new rectangle.
             height (int): The height of the new rectangle.
@@ -24,7 +25,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """set the width of the Rectangle."""
+        """Get/set the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -37,7 +38,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """set the height of the Rectangle."""
+        """Get/set the height of the Rectangle."""
         return self.__height
 
     @height.setter

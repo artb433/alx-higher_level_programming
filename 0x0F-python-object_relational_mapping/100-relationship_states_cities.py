@@ -1,32 +1,34 @@
 #!/usr/bin/python3
-"""
-This script prints all City objects
-from the database `hbtn_0e_14_usa`.
-"""
+'''script for task 15'''
 
-from sys import argv
-from relationship_state import Base, State
+from relationship_state import State, Base
 from relationship_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+import sys
 
-if __name__ == "__main__":
-    """
-    Access to the database and get the cities
-    from the database.
-    """
 
-    db_uri = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-        argv[1], argv[2], argv[3])
-    engine = create_engine(db_uri)
-    Base.metadata.create_all(engine)
+if __name__ == '__main__':
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
+    host = 'localhost'
+    port = '3306'
+
+    engine = create_engine('mysql+mysqldb://{}:{}@{}:{}/{}'.format(
+                           username, password, host, port, db_name
+                           ), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
+    Base.metadata.create_all(engine)
+    local_session = Session()
 
-    session = Session()
-    cal_state = State(name='California')
-    sfr_city = City(name='San Francisco')
-    cal_state.cities.append(sfr_city)
+    new_state = State(name='California')
+    new_city = City(name='San Francisco')
+    new_state.cities.append(new_city)
 
-    session.add(cal_state)
-    session.commit()
-    session.close()
+    local_session.add(new_state)
+    local_session.add(new_city)
+    local_session.commit()
+
+    local_session.close()
+    engine.dispose()
