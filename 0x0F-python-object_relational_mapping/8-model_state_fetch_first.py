@@ -1,29 +1,30 @@
 #!/usr/bin/python3
-'''script for task 8'''
+"""
+This script prints the first State object
+from the database `hbtn_0e_6_usa`.
+"""
 
-from model_state import Base, State
+from sys import argv
+from model_state import State, Base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.pool import NullPool
-import sys
 
+if __name__ == "__main__":
+    """
+    Access to the database and get a state
+    from the database.
+    """
 
-if __name__ == '__main__':
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
-    host = 'localhost'
-    port = '3306'
+    db_url = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
+        argv[1], argv[2], argv[3])
 
-    engine = create_engine('mysql+mysqldb://{}:{}@{}:{}/{}'.format(
-                           username, password, host, port, db_name),
-                           pool_pre_ping=True, poolclass=NullPool)
+    engine = create_engine(db_url)
     Session = sessionmaker(bind=engine)
-    local_session = Session()
-    result = local_session.query(State).order_by(State.id).first()
-    local_session.close()
 
-    if result:
-        print('{}: {}'.format(result.id, result.name))
+    session = Session()
+
+    state = session.query(State).order_by(State.id).first()
+    if state is not None:
+        print('{0}: {1}'.format(state.id, state.name))
     else:
-        print('Nothing')
+        print("Nothing")

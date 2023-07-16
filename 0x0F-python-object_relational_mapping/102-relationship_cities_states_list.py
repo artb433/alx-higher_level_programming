@@ -1,29 +1,24 @@
 #!/usr/bin/python3
-'''script for task 17'''
-
+"""
+Lists all City objects from the database hbtn_0e_101_usa
+"""
+import sys
+from relationship_state import Base, State
+from relationship_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from relationship_state import State, Base
-from relationship_city import City
-import sys
+
 
 if __name__ == '__main__':
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
-    host = 'localhost'
-    port = '3306'
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
+                           format(sys.argv[1], sys.argv[2], sys.argv[3]),
+                           pool_pre_ping=True)
 
-    engine = create_engine('mysql+mysqldb://{}:{}@{}:{}/{}'.format(
-                            username, password, host, port, db_name
-                            ), pool_pre_ping=True)
-    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
-    loc_session = Session()
-    cities = loc_session.query(City).order_by(City.id.asc()).all()
+    session = Session()
 
-    for city in cities:
-        print('{}: {} -> {}'.format(city.id, city.name, city.state.name))
+    states = session.query(State).join(City).order_by(City.id).all()
 
-    loc_session.close()
-    engine.dispose()
+    for state in states:
+        for city in state.cities:
+            print("{}: {} -> {}".format(city.id, city.name, state.name))
