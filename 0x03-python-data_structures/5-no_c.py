@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
-def no_c(my_string):
-    updated_str = ''
-    for i in my_string:
-        if i != 'c' and i != 'C':
-            updated_str += i
-    return (updated_str)
+def no_c(my_str):
+    """
+    Returns a copy of my_str without c or C
+    Args:
+        my_str - the string to filter
+    """
+    return "".join(filter(lambda x: x not in 'cC', my_str))

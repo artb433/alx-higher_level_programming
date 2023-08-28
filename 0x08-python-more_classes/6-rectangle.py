@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""Display a Rectangle class."""
+# 6-rectangle.py
+"""Defines a Rectangle class."""
 
 
 class Rectangle:
-    """Structure of a rectangle.
+    """Represent a rectangle.
     Attributes:
         number_of_instances (int): The number of Rectangle instances.
     """
@@ -22,7 +23,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """set the width of the Rectangle."""
+        """Get/set the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -35,7 +36,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """set the height of the Rectangle."""
+        """Get/set the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -63,18 +64,18 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
 
-        rectx = []
+        rect = []
         for i in range(self.__height):
-            [rectx.append('#') for j in range(self.__width)]
+            [rect.append('#') for j in range(self.__width)]
             if i != self.__height - 1:
-                rectx.append("\n")
-        return ("".join(rectx))
+                rect.append("\n")
+        return ("".join(rect))
 
     def __repr__(self):
         """Return the string representation of the Rectangle."""
-        rectx = "Rectangle(" + str(self.__width)
-        rectx += ", " + str(self.__height) + ")"
-        return (rectx)
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return (rect)
 
     def __del__(self):
         """Print a message for every deletion of a Rectangle."""
